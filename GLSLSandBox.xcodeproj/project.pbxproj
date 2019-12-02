@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F60FA09C85242216032F42A /* libPods-GLSLSandBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3196181EDE519C45369A6C03 /* libPods-GLSLSandBox.a */; };
 		F984C62323953E930054A9D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C62223953E930054A9D1 /* AppDelegate.m */; };
 		F984C62623953E930054A9D1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C62523953E930054A9D1 /* SceneDelegate.m */; };
 		F984C62923953E930054A9D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C62823953E930054A9D1 /* ViewController.m */; };
@@ -14,9 +15,23 @@
 		F984C62E23953E940054A9D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F984C62D23953E940054A9D1 /* Assets.xcassets */; };
 		F984C63123953E940054A9D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F984C62F23953E940054A9D1 /* LaunchScreen.storyboard */; };
 		F984C63423953E940054A9D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C63323953E940054A9D1 /* main.m */; };
+		F984C63E239541930054A9D1 /* GLSLSandboxOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C63C239541930054A9D1 /* GLSLSandboxOutput.m */; };
+		F984C645239542130054A9D1 /* GLSLSandboxListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C642239542130054A9D1 /* GLSLSandboxListViewController.m */; };
+		F984C646239542130054A9D1 /* GLSLSandboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C643239542130054A9D1 /* GLSLSandboxViewController.m */; };
+		F984C6522395435B0054A9D1 /* Flame.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C64A2395435B0054A9D1 /* Flame.fsh */; };
+		F984C6532395435B0054A9D1 /* SpreadLight.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C64B2395435B0054A9D1 /* SpreadLight.fsh */; };
+		F984C6542395435B0054A9D1 /* Example.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C64C2395435B0054A9D1 /* Example.fsh */; };
+		F984C6552395435B0054A9D1 /* VDrop.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C64D2395435B0054A9D1 /* VDrop.fsh */; };
+		F984C6562395435B0054A9D1 /* Garland.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C64E2395435B0054A9D1 /* Garland.fsh */; };
+		F984C6572395435B0054A9D1 /* Rabbit.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C64F2395435B0054A9D1 /* Rabbit.fsh */; };
+		F984C6582395435B0054A9D1 /* AshokaChakra.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C6502395435B0054A9D1 /* AshokaChakra.fsh */; };
+		F984C6592395435B0054A9D1 /* Round.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C6512395435B0054A9D1 /* Round.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		073CCA7FA9C6E042E6A82427 /* Pods-GLSLSandBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLSLSandBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLSLSandBox/Pods-GLSLSandBox.release.xcconfig"; sourceTree = "<group>"; };
+		3196181EDE519C45369A6C03 /* libPods-GLSLSandBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GLSLSandBox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98D7B3545D782ADDE8A54F44 /* Pods-GLSLSandBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLSLSandBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLSLSandBox/Pods-GLSLSandBox.debug.xcconfig"; sourceTree = "<group>"; };
 		F984C61E23953E930054A9D1 /* GLSLSandBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLSLSandBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F984C62123953E930054A9D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F984C62223953E930054A9D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +44,20 @@
 		F984C63023953E940054A9D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F984C63223953E940054A9D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F984C63323953E940054A9D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F984C63C239541930054A9D1 /* GLSLSandboxOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLSLSandboxOutput.m; sourceTree = "<group>"; };
+		F984C63D239541930054A9D1 /* GLSLSandboxOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLSLSandboxOutput.h; sourceTree = "<group>"; };
+		F984C641239542130054A9D1 /* GLSLSandboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLSLSandboxViewController.h; sourceTree = "<group>"; };
+		F984C642239542130054A9D1 /* GLSLSandboxListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLSLSandboxListViewController.m; sourceTree = "<group>"; };
+		F984C643239542130054A9D1 /* GLSLSandboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLSLSandboxViewController.m; sourceTree = "<group>"; };
+		F984C644239542130054A9D1 /* GLSLSandboxListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLSLSandboxListViewController.h; sourceTree = "<group>"; };
+		F984C64A2395435B0054A9D1 /* Flame.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Flame.fsh; sourceTree = "<group>"; };
+		F984C64B2395435B0054A9D1 /* SpreadLight.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SpreadLight.fsh; sourceTree = "<group>"; };
+		F984C64C2395435B0054A9D1 /* Example.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Example.fsh; sourceTree = "<group>"; };
+		F984C64D2395435B0054A9D1 /* VDrop.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VDrop.fsh; sourceTree = "<group>"; };
+		F984C64E2395435B0054A9D1 /* Garland.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Garland.fsh; sourceTree = "<group>"; };
+		F984C64F2395435B0054A9D1 /* Rabbit.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Rabbit.fsh; sourceTree = "<group>"; };
+		F984C6502395435B0054A9D1 /* AshokaChakra.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AshokaChakra.fsh; sourceTree = "<group>"; };
+		F984C6512395435B0054A9D1 /* Round.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Round.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +65,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F60FA09C85242216032F42A /* libPods-GLSLSandBox.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BDBA397ACFAD4D4BFEEB2EB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3196181EDE519C45369A6C03 /* libPods-GLSLSandBox.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB371B5B5B3EDDEFBFF2B459 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98D7B3545D782ADDE8A54F44 /* Pods-GLSLSandBox.debug.xcconfig */,
+				073CCA7FA9C6E042E6A82427 /* Pods-GLSLSandBox.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F984C61523953E930054A9D1 = {
 			isa = PBXGroup;
 			children = (
 				F984C62023953E930054A9D1 /* GLSLSandBox */,
 				F984C61F23953E930054A9D1 /* Products */,
+				DB371B5B5B3EDDEFBFF2B459 /* Pods */,
+				BDBA397ACFAD4D4BFEEB2EB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +110,9 @@
 		F984C62023953E930054A9D1 /* GLSLSandBox */ = {
 			isa = PBXGroup;
 			children = (
+				F984C6492395435B0054A9D1 /* FragmentShader */,
+				F984C640239542130054A9D1 /* Controllers */,
+				F984C63B239541520054A9D1 /* GLSLOutput */,
 				F984C62123953E930054A9D1 /* AppDelegate.h */,
 				F984C62223953E930054A9D1 /* AppDelegate.m */,
 				F984C62423953E930054A9D1 /* SceneDelegate.h */,
@@ -76,6 +128,41 @@
 			path = GLSLSandBox;
 			sourceTree = "<group>";
 		};
+		F984C63B239541520054A9D1 /* GLSLOutput */ = {
+			isa = PBXGroup;
+			children = (
+				F984C63D239541930054A9D1 /* GLSLSandboxOutput.h */,
+				F984C63C239541930054A9D1 /* GLSLSandboxOutput.m */,
+			);
+			path = GLSLOutput;
+			sourceTree = "<group>";
+		};
+		F984C640239542130054A9D1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F984C644239542130054A9D1 /* GLSLSandboxListViewController.h */,
+				F984C642239542130054A9D1 /* GLSLSandboxListViewController.m */,
+				F984C641239542130054A9D1 /* GLSLSandboxViewController.h */,
+				F984C643239542130054A9D1 /* GLSLSandboxViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F984C6492395435B0054A9D1 /* FragmentShader */ = {
+			isa = PBXGroup;
+			children = (
+				F984C64A2395435B0054A9D1 /* Flame.fsh */,
+				F984C64B2395435B0054A9D1 /* SpreadLight.fsh */,
+				F984C64C2395435B0054A9D1 /* Example.fsh */,
+				F984C64D2395435B0054A9D1 /* VDrop.fsh */,
+				F984C64E2395435B0054A9D1 /* Garland.fsh */,
+				F984C64F2395435B0054A9D1 /* Rabbit.fsh */,
+				F984C6502395435B0054A9D1 /* AshokaChakra.fsh */,
+				F984C6512395435B0054A9D1 /* Round.fsh */,
+			);
+			path = FragmentShader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F984C63723953E940054A9D1 /* Build configuration list for PBXNativeTarget "GLSLSandBox" */;
 			buildPhases = (
+				11632E4CC6824E2168D06F4D /* [CP] Check Pods Manifest.lock */,
 				F984C61A23953E930054A9D1 /* Sources */,
 				F984C61B23953E930054A9D1 /* Frameworks */,
 				F984C61C23953E930054A9D1 /* Resources */,
+				223D5EA46B9952F7F36FFA99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,13 +222,76 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F984C6582395435B0054A9D1 /* AshokaChakra.fsh in Resources */,
+				F984C6542395435B0054A9D1 /* Example.fsh in Resources */,
+				F984C6592395435B0054A9D1 /* Round.fsh in Resources */,
 				F984C63123953E940054A9D1 /* LaunchScreen.storyboard in Resources */,
+				F984C6572395435B0054A9D1 /* Rabbit.fsh in Resources */,
+				F984C6552395435B0054A9D1 /* VDrop.fsh in Resources */,
+				F984C6562395435B0054A9D1 /* Garland.fsh in Resources */,
+				F984C6522395435B0054A9D1 /* Flame.fsh in Resources */,
 				F984C62E23953E940054A9D1 /* Assets.xcassets in Resources */,
+				F984C6532395435B0054A9D1 /* SpreadLight.fsh in Resources */,
 				F984C62C23953E930054A9D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11632E4CC6824E2168D06F4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GLSLSandBox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		223D5EA46B9952F7F36FFA99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GLSLSandBox/Pods-GLSLSandBox-resources.sh",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GLSLSandBox/Pods-GLSLSandBox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F984C61A23953E930054A9D1 /* Sources */ = {
@@ -148,8 +300,11 @@
 			files = (
 				F984C62923953E930054A9D1 /* ViewController.m in Sources */,
 				F984C62323953E930054A9D1 /* AppDelegate.m in Sources */,
+				F984C646239542130054A9D1 /* GLSLSandboxViewController.m in Sources */,
+				F984C645239542130054A9D1 /* GLSLSandboxListViewController.m in Sources */,
 				F984C63423953E940054A9D1 /* main.m in Sources */,
 				F984C62623953E930054A9D1 /* SceneDelegate.m in Sources */,
+				F984C63E239541930054A9D1 /* GLSLSandboxOutput.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,16 +442,18 @@
 		};
 		F984C63823953E940054A9D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98D7B3545D782ADDE8A54F44 /* Pods-GLSLSandBox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YGTXB4R2WQ;
+				DEVELOPMENT_TEAM = 5ZDZ2RA37W;
 				INFOPLIST_FILE = GLSLSandBox/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ashoka.GLSLSandBox;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashoka.glslsandbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,16 +461,18 @@
 		};
 		F984C63923953E940054A9D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 073CCA7FA9C6E042E6A82427 /* Pods-GLSLSandBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YGTXB4R2WQ;
+				DEVELOPMENT_TEAM = 5ZDZ2RA37W;
 				INFOPLIST_FILE = GLSLSandBox/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ashoka.GLSLSandBox;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashoka.glslsandbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
