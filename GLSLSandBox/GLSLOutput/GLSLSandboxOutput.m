@@ -85,6 +85,7 @@ dispatch_source_t createDispatchTimer(uint64_t interval, dispatch_queue_t queue,
 
 @property (nonatomic, strong) GLProgram *renderProgram;
 //@property (nonatomic, strong) dispatch_source_t timer;
+@property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) NSDate *startTime;
 @property (nonatomic, assign) BOOL isRunning;
 
@@ -149,9 +150,16 @@ dispatch_source_t createDispatchTimer(uint64_t interval, dispatch_queue_t queue,
     return self;
 }
 
+- (NSTimer *)timer {
+    if (_timer == nil) {
+        _timer = [NSTimer timerWithTimeInterval:(1.0/60) target:self selector:@selector(render) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    }
+    return _timer;
+}
+
 - (void)startRender {
     self.startTime = [NSDate date];
-    __weak typeof(self) weakSelf = self;
     // it seems inefficiency use dispatch_source_t
 //    _timer = createDispatchTimer(50 * NSEC_PER_MSEC, [[GLSLSandboxContext sharedInstance] timeQueue], ^{
 //        [weakSelf render];
@@ -159,20 +167,24 @@ dispatch_source_t createDispatchTimer(uint64_t interval, dispatch_queue_t queue,
 //    dispatch_resume(self.timer);
     if (self.isRunning) return;
     self.isRunning = YES;
-    dispatch_async([[GLSLSandboxContext sharedInstance] timeQueue], ^{
-        NSTimeInterval startTime;
-        NSTimeInterval endTime;
-        NSTimeInterval delta;
-        while (self.isRunning) {
-            startTime = [[NSDate date] timeIntervalSince1970];
-            [weakSelf render];
-            endTime = [[NSDate date] timeIntervalSince1970];
-            delta = endTime - startTime;
-            if (delta * 1000 < 16.0) {
-                usleep((16.0 - delta * 1000) * 1000);
-            }
-        }
-    });
+    [self.timer fire];
+    return;
+    // use while loop will crash sometimes
+//    __weak typeof(self) weakSelf = self;
+//    dispatch_async([[GLSLSandboxContext sharedInstance] timeQueue], ^{
+//        NSTimeInterval startTime;
+//        NSTimeInterval endTime;
+//        NSTimeInterval delta;
+//        while (self.isRunning) {
+//            startTime = [[NSDate date] timeIntervalSince1970];
+//            [weakSelf render];
+//            endTime = [[NSDate date] timeIntervalSince1970];
+//            delta = endTime - startTime;
+//            if (delta * 1000 < 16.0) {
+//                usleep((16.0 - delta * 1000) * 1000);
+//            }
+//        }
+//    });
 }
 
 - (void)stopRender {
@@ -181,17 +193,22 @@ dispatch_source_t createDispatchTimer(uint64_t interval, dispatch_queue_t queue,
 //        self.timer = nil;
 //    }
     self.isRunning = NO;
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
 }
 
 - (void)render {
+    CGSize framebufferSize = self.framebufferSize;
     [GPUImageContext setActiveShaderProgram:_renderProgram];
-    outputFramebuffer = [[GPUImageContext sharedFramebufferCache] fetchFramebufferForSize:self.framebufferSize onlyTexture:NO];
+    outputFramebuffer = [[GPUImageContext sharedFramebufferCache] fetchFramebufferForSize:framebufferSize onlyTexture:NO];
     [outputFramebuffer activateFramebuffer];
     glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     NSDate *now = [NSDate date];
     glUniform1f(_timeUniform, now.timeIntervalSince1970 - self.startTime.timeIntervalSince1970);
-    glUniform2f(_resolutionUniform, self.framebufferSize.width, self.framebufferSize.height);
+    glUniform2f(_resolutionUniform, framebufferSize.width, framebufferSize.height);
     glUniform2f(_mouseUniform, self.mousePosition.width, self.mousePosition.height);
     static const GLfloat squareVertices[] = {
         - 1.0, - 1.0,
@@ -204,10 +221,10 @@ dispatch_source_t createDispatchTimer(uint64_t interval, dispatch_queue_t queue,
     };
     glVertexAttribPointer(_positionAttribute, 2, GL_FLOAT, 0, 0, squareVertices);
     glDrawArrays(GL_TRIANGLES, 0, 6);
-    [self notifyTargetsToUpdate];
+    [self notifyTargetsToUpdateWithFrameBufferSize:framebufferSize];
 }
 
-- (void)notifyTargetsToUpdate {
+- (void)notifyTargetsToUpdateWithFrameBufferSize:(CGSize)size {
     if (dispatch_semaphore_wait(_updateTargetsSemaphore, DISPATCH_TIME_NOW) != 0) {
         return;
     }
@@ -217,7 +234,7 @@ dispatch_source_t createDispatchTimer(uint64_t interval, dispatch_queue_t queue,
         if (currentTarget != self.targetToIgnoreForUpdates) {
             // should set rotation to kGPUImageFlipVertical, otherwise image vertical flip
             [currentTarget setInputRotation:kGPUImageFlipVertical atIndex:textureIndexOfTarget];
-            [currentTarget setInputSize:self.framebufferSize atIndex:textureIndexOfTarget];
+            [currentTarget setInputSize:size atIndex:textureIndexOfTarget];
             [currentTarget setInputFramebuffer:self->outputFramebuffer atIndex:textureIndexOfTarget];
         }
     }
