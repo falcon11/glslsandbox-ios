@@ -9,7 +9,10 @@ You can run most Fragment Shader copied from [glslsandox](http://glslsandbox.com
 1. copy fragment shader source code from [glslsandbox](http://glslsandbox.com/)
 2. create a new fragment shader source file under FragmentShader folder, then past code copied from last step. If you copy shader from [ShaderToy](https://www.shadertoy.com/), you need to modify the file.
    ```c
-    // add below lines
+    // add below lines at begining
+    #ifdef GL_ES
+    precision mediump float;
+    #endif
     uniform float time;
     uniform vec3 mouse;
     uniform vec2 resolution;
@@ -17,6 +20,13 @@ You can run most Fragment Shader copied from [glslsandox](http://glslsandbox.com
     #define iTime time
     #define iResolution resolution
     #define iMouse mouse
+
+    // add below lines at end
+    // --------[ Original ShaderToy ends here ]---------- //
+   void main(void)
+   {
+       mainImage(gl_FragColor, gl_FragCoord.xy);
+   }
    ```
 3. in ***GLSLSandboxListViewController.m*** file, add the fragment shader source file name to the `sandboxDemosList`.
 4. run the project you will find the new demo in the demo list.

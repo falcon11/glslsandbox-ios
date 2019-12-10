@@ -27,6 +27,7 @@
 		F984C6582395435B0054A9D1 /* AshokaChakra.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C6502395435B0054A9D1 /* AshokaChakra.fsh */; };
 		F984C6592395435B0054A9D1 /* Round.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C6512395435B0054A9D1 /* Round.fsh */; };
 		F9CD14A4239F7F39004D19C9 /* GithubCat.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F9CD14A3239F7F39004D19C9 /* GithubCat.fsh */; };
+		F9CD14AA239F91D4004D19C9 /* ProteanClouds.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F9CD14A9239F91D4004D19C9 /* ProteanClouds.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		F984C6502395435B0054A9D1 /* AshokaChakra.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AshokaChakra.fsh; sourceTree = "<group>"; };
 		F984C6512395435B0054A9D1 /* Round.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Round.fsh; sourceTree = "<group>"; };
 		F9CD14A3239F7F39004D19C9 /* GithubCat.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = GithubCat.fsh; sourceTree = "<group>"; };
+		F9CD14A9239F91D4004D19C9 /* ProteanClouds.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = ProteanClouds.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				F984C6502395435B0054A9D1 /* AshokaChakra.fsh */,
 				F984C6512395435B0054A9D1 /* Round.fsh */,
 				F9CD14A3239F7F39004D19C9 /* GithubCat.fsh */,
+				F9CD14A9239F91D4004D19C9 /* ProteanClouds.fsh */,
 			);
 			path = FragmentShader;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				F984C6582395435B0054A9D1 /* AshokaChakra.fsh in Resources */,
 				F984C6542395435B0054A9D1 /* Example.fsh in Resources */,
 				F984C6592395435B0054A9D1 /* Round.fsh in Resources */,
+				F9CD14AA239F91D4004D19C9 /* ProteanClouds.fsh in Resources */,
 				F984C63123953E940054A9D1 /* LaunchScreen.storyboard in Resources */,
 				F984C6572395435B0054A9D1 /* Rabbit.fsh in Resources */,
 				F984C6552395435B0054A9D1 /* VDrop.fsh in Resources */,
