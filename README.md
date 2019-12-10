@@ -21,10 +21,8 @@ You can run most Fragment Shader copied from [glslsandox](http://glslsandbox.com
 4. run the project you will find the new demo in the demo list.
 
 ## Demo Snapshot
-<div style="display:flex;">
-   <img src="./static/images/IMG_3D3DCFFAE33F-1.jpeg" style="width:375px;" />
-   <img src="./static/images/IMG_CEA0225C9A39-1.jpeg" style="width:375px;margin-left:20px" />
-</div>
-<div style="display:flex;">
-   <img src="./static/images/RPReplay_Final1575964106.2019-12-10 15_53_09.gif" style="width:375px" />
-</div>
+<p float="left">
+   <img src="./static/images/IMG_3D3DCFFAE33F-1.jpeg" width="375" />
+   <img src="./static/images/IMG_CEA0225C9A39-1.jpeg" width="375" />
+   <img src="./static/images/RPReplay_Final1575964106.2019-12-10 15_53_09.gif" width="375" />
+</p>
