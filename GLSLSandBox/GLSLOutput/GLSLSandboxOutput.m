@@ -152,7 +152,7 @@ dispatch_source_t createDispatchTimer(uint64_t interval, dispatch_queue_t queue,
 
 - (NSTimer *)timer {
     if (_timer == nil) {
-        _timer = [NSTimer timerWithTimeInterval:(1.0/60) target:self selector:@selector(render) userInfo:nil repeats:YES];
+        _timer = [NSTimer timerWithTimeInterval:(1.0/60.0) target:self selector:@selector(render) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     }
     return _timer;

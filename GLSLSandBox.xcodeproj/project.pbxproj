@@ -28,6 +28,7 @@
 		F984C6592395435B0054A9D1 /* Round.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C6512395435B0054A9D1 /* Round.fsh */; };
 		F9CD14A4239F7F39004D19C9 /* GithubCat.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F9CD14A3239F7F39004D19C9 /* GithubCat.fsh */; };
 		F9CD14AA239F91D4004D19C9 /* ProteanClouds.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F9CD14A9239F91D4004D19C9 /* ProteanClouds.fsh */; };
+		F9CD14AC239F93F3004D19C9 /* Cybertruck.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F9CD14AB239F93F3004D19C9 /* Cybertruck.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		F984C6512395435B0054A9D1 /* Round.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Round.fsh; sourceTree = "<group>"; };
 		F9CD14A3239F7F39004D19C9 /* GithubCat.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = GithubCat.fsh; sourceTree = "<group>"; };
 		F9CD14A9239F91D4004D19C9 /* ProteanClouds.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = ProteanClouds.fsh; sourceTree = "<group>"; };
+		F9CD14AB239F93F3004D19C9 /* Cybertruck.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Cybertruck.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		F984C6492395435B0054A9D1 /* FragmentShader */ = {
 			isa = PBXGroup;
 			children = (
+				F9CD14AB239F93F3004D19C9 /* Cybertruck.fsh */,
 				F984C64A2395435B0054A9D1 /* Flame.fsh */,
 				F984C64B2395435B0054A9D1 /* SpreadLight.fsh */,
 				F984C64C2395435B0054A9D1 /* Example.fsh */,
@@ -237,6 +240,7 @@
 				F984C6552395435B0054A9D1 /* VDrop.fsh in Resources */,
 				F984C6562395435B0054A9D1 /* Garland.fsh in Resources */,
 				F9CD14A4239F7F39004D19C9 /* GithubCat.fsh in Resources */,
+				F9CD14AC239F93F3004D19C9 /* Cybertruck.fsh in Resources */,
 				F984C6522395435B0054A9D1 /* Flame.fsh in Resources */,
 				F984C62E23953E940054A9D1 /* Assets.xcassets in Resources */,
 				F984C6532395435B0054A9D1 /* SpreadLight.fsh in Resources */,

@@ -46,6 +46,7 @@
             @"Round",
             @"GithubCat",
             @"ProteanClouds",
+            @"Cybertruck",
         ];
         NSMutableArray *sandboxDemosList = [NSMutableArray new];
         for (NSString *fileName in defaultDemos) {
