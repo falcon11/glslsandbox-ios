@@ -43,7 +43,8 @@
             @"VDrop",
             @"SpreadLight",
             @"Flame",
-            @"Round"
+            @"Round",
+            @"GithubCat",
         ];
         NSMutableArray *sandboxDemosList = [NSMutableArray new];
         for (NSString *fileName in defaultDemos) {

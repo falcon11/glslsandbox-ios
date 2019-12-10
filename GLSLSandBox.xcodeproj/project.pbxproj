@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,7 @@
 		F984C6572395435B0054A9D1 /* Rabbit.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C64F2395435B0054A9D1 /* Rabbit.fsh */; };
 		F984C6582395435B0054A9D1 /* AshokaChakra.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C6502395435B0054A9D1 /* AshokaChakra.fsh */; };
 		F984C6592395435B0054A9D1 /* Round.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C6512395435B0054A9D1 /* Round.fsh */; };
+		F9CD14A4239F7F39004D19C9 /* GithubCat.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F9CD14A3239F7F39004D19C9 /* GithubCat.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		F984C64F2395435B0054A9D1 /* Rabbit.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Rabbit.fsh; sourceTree = "<group>"; };
 		F984C6502395435B0054A9D1 /* AshokaChakra.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AshokaChakra.fsh; sourceTree = "<group>"; };
 		F984C6512395435B0054A9D1 /* Round.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Round.fsh; sourceTree = "<group>"; };
+		F9CD14A3239F7F39004D19C9 /* GithubCat.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = GithubCat.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				F984C64F2395435B0054A9D1 /* Rabbit.fsh */,
 				F984C6502395435B0054A9D1 /* AshokaChakra.fsh */,
 				F984C6512395435B0054A9D1 /* Round.fsh */,
+				F9CD14A3239F7F39004D19C9 /* GithubCat.fsh */,
 			);
 			path = FragmentShader;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				F984C6572395435B0054A9D1 /* Rabbit.fsh in Resources */,
 				F984C6552395435B0054A9D1 /* VDrop.fsh in Resources */,
 				F984C6562395435B0054A9D1 /* Garland.fsh in Resources */,
+				F9CD14A4239F7F39004D19C9 /* GithubCat.fsh in Resources */,
 				F984C6522395435B0054A9D1 /* Flame.fsh in Resources */,
 				F984C62E23953E940054A9D1 /* Assets.xcassets in Resources */,
 				F984C6532395435B0054A9D1 /* SpreadLight.fsh in Resources */,
@@ -267,28 +271,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GLSLSandBox/Pods-GLSLSandBox-resources.sh",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
+				"${PODS_ROOT}/Target Support Files/Pods-GLSLSandBox/Pods-GLSLSandBox-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
+				"${PODS_ROOT}/Target Support Files/Pods-GLSLSandBox/Pods-GLSLSandBox-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GLSLSandBox/Pods-GLSLSandBox-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GLSLSandBox/Pods-GLSLSandBox-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -453,7 +444,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ashoka.glslsandbox;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashoka.glslsandbox.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -472,7 +463,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ashoka.glslsandbox;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashoka.glslsandbox.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
