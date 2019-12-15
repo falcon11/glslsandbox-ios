@@ -1,4 +1,4 @@
-precision mediump float;
+precision highp float;
 uniform float time; // time
 uniform vec2  resolution; // resolution
 

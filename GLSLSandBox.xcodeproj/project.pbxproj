@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6F60FA09C85242216032F42A /* libPods-GLSLSandBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3196181EDE519C45369A6C03 /* libPods-GLSLSandBox.a */; };
+		F93521E023A5D340001FB9FF /* GLSLSandboxMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93521DF23A5D340001FB9FF /* GLSLSandboxMainViewController.m */; };
+		F93521E323A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93521E223A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m */; };
 		F984C62323953E930054A9D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C62223953E930054A9D1 /* AppDelegate.m */; };
 		F984C62623953E930054A9D1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C62523953E930054A9D1 /* SceneDelegate.m */; };
-		F984C62923953E930054A9D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C62823953E930054A9D1 /* ViewController.m */; };
 		F984C62C23953E930054A9D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F984C62A23953E930054A9D1 /* Main.storyboard */; };
 		F984C62E23953E940054A9D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F984C62D23953E940054A9D1 /* Assets.xcassets */; };
 		F984C63123953E940054A9D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F984C62F23953E940054A9D1 /* LaunchScreen.storyboard */; };
@@ -35,13 +36,15 @@
 		073CCA7FA9C6E042E6A82427 /* Pods-GLSLSandBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLSLSandBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLSLSandBox/Pods-GLSLSandBox.release.xcconfig"; sourceTree = "<group>"; };
 		3196181EDE519C45369A6C03 /* libPods-GLSLSandBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GLSLSandBox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D7B3545D782ADDE8A54F44 /* Pods-GLSLSandBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLSLSandBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLSLSandBox/Pods-GLSLSandBox.debug.xcconfig"; sourceTree = "<group>"; };
+		F93521DE23A5D340001FB9FF /* GLSLSandboxMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLSLSandboxMainViewController.h; sourceTree = "<group>"; };
+		F93521DF23A5D340001FB9FF /* GLSLSandboxMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLSLSandboxMainViewController.m; sourceTree = "<group>"; };
+		F93521E123A5D6F9001FB9FF /* GLSLSandboxCustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLSLSandboxCustomViewController.h; sourceTree = "<group>"; };
+		F93521E223A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLSLSandboxCustomViewController.m; sourceTree = "<group>"; };
 		F984C61E23953E930054A9D1 /* GLSLSandBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLSLSandBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F984C62123953E930054A9D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F984C62223953E930054A9D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F984C62423953E930054A9D1 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		F984C62523953E930054A9D1 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		F984C62723953E930054A9D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F984C62823953E930054A9D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F984C62B23953E930054A9D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F984C62D23953E940054A9D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F984C63023953E940054A9D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,8 +126,6 @@
 				F984C62223953E930054A9D1 /* AppDelegate.m */,
 				F984C62423953E930054A9D1 /* SceneDelegate.h */,
 				F984C62523953E930054A9D1 /* SceneDelegate.m */,
-				F984C62723953E930054A9D1 /* ViewController.h */,
-				F984C62823953E930054A9D1 /* ViewController.m */,
 				F984C62A23953E930054A9D1 /* Main.storyboard */,
 				F984C62D23953E940054A9D1 /* Assets.xcassets */,
 				F984C62F23953E940054A9D1 /* LaunchScreen.storyboard */,
@@ -150,6 +151,10 @@
 				F984C642239542130054A9D1 /* GLSLSandboxListViewController.m */,
 				F984C641239542130054A9D1 /* GLSLSandboxViewController.h */,
 				F984C643239542130054A9D1 /* GLSLSandboxViewController.m */,
+				F93521DE23A5D340001FB9FF /* GLSLSandboxMainViewController.h */,
+				F93521DF23A5D340001FB9FF /* GLSLSandboxMainViewController.m */,
+				F93521E123A5D6F9001FB9FF /* GLSLSandboxCustomViewController.h */,
+				F93521E223A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,11 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F984C62923953E930054A9D1 /* ViewController.m in Sources */,
 				F984C62323953E930054A9D1 /* AppDelegate.m in Sources */,
 				F984C646239542130054A9D1 /* GLSLSandboxViewController.m in Sources */,
 				F984C645239542130054A9D1 /* GLSLSandboxListViewController.m in Sources */,
 				F984C63423953E940054A9D1 /* main.m in Sources */,
+				F93521E023A5D340001FB9FF /* GLSLSandboxMainViewController.m in Sources */,
+				F93521E323A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m in Sources */,
 				F984C62623953E930054A9D1 /* SceneDelegate.m in Sources */,
 				F984C63E239541930054A9D1 /* GLSLSandboxOutput.m in Sources */,
 			);
