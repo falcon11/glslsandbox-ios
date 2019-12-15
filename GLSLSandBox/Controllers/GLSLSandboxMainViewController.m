@@ -9,6 +9,7 @@
 #import "GLSLSandboxMainViewController.h"
 #import "GLSLSandboxListViewController.h"
 #import "GLSLSandboxCustomViewController.h"
+#import "GLSLCodeViewController.h"
 
 @interface GLSLSandboxMainViewController ()
 
@@ -71,7 +72,8 @@
 }
 
 - (void)handleAddCustomGLSL:(UIBarButtonItem *)buttonItem {
-    
+    GLSLCodeViewController *vc = [[GLSLCodeViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

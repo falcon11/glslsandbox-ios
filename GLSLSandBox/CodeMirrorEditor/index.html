@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<title>CodeMirror: Full Screen Editing</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+
+<link rel="stylesheet" href="./doc/docs.css" />
+<link rel="stylesheet" href="./lib/codemirror.css" />
+<link rel="stylesheet" href="lib/default.css">
+<link rel="stylesheet" href="./addon/display/fullscreen.css" />
+<link rel="stylesheet" href="./theme/night.css" />
+<script src="./lib/codemirror.js"></script>
+<script src="./mode/xml/xml.js"></script>
+<script src="./mode/clike/clike.js"></script>
+<script src="./addon/display/fullscreen.js"></script>
+<script src="./addon/edit/matchbrackets.js"></script>
+
+
+<body>
+  <form>
+    <textarea id="code" name="code"></textarea>
+</form>
+  <script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+      lineNumbers: true,
+      theme: "night",
+      fullScreen: true,
+      mode: "x-shader/x-fragment",
+      matchBrackets: true,
+    });
+  </script>
+</body>

@@ -10,6 +10,8 @@
 		6F60FA09C85242216032F42A /* libPods-GLSLSandBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3196181EDE519C45369A6C03 /* libPods-GLSLSandBox.a */; };
 		F93521E023A5D340001FB9FF /* GLSLSandboxMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93521DF23A5D340001FB9FF /* GLSLSandboxMainViewController.m */; };
 		F93521E323A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93521E223A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m */; };
+		F94247D023A6739E00AD4808 /* CodeMirrorEditor in Resources */ = {isa = PBXBuildFile; fileRef = F94247CF23A6739E00AD4808 /* CodeMirrorEditor */; };
+		F94247D323A67F0E00AD4808 /* GLSLCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F94247D223A67F0E00AD4808 /* GLSLCodeViewController.m */; };
 		F984C62323953E930054A9D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C62223953E930054A9D1 /* AppDelegate.m */; };
 		F984C62623953E930054A9D1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C62523953E930054A9D1 /* SceneDelegate.m */; };
 		F984C62C23953E930054A9D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F984C62A23953E930054A9D1 /* Main.storyboard */; };
@@ -40,6 +42,9 @@
 		F93521DF23A5D340001FB9FF /* GLSLSandboxMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLSLSandboxMainViewController.m; sourceTree = "<group>"; };
 		F93521E123A5D6F9001FB9FF /* GLSLSandboxCustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLSLSandboxCustomViewController.h; sourceTree = "<group>"; };
 		F93521E223A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLSLSandboxCustomViewController.m; sourceTree = "<group>"; };
+		F94247CF23A6739E00AD4808 /* CodeMirrorEditor */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CodeMirrorEditor; sourceTree = "<group>"; };
+		F94247D123A67F0E00AD4808 /* GLSLCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLSLCodeViewController.h; sourceTree = "<group>"; };
+		F94247D223A67F0E00AD4808 /* GLSLCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLSLCodeViewController.m; sourceTree = "<group>"; };
 		F984C61E23953E930054A9D1 /* GLSLSandBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLSLSandBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F984C62123953E930054A9D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F984C62223953E930054A9D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -119,6 +124,7 @@
 		F984C62023953E930054A9D1 /* GLSLSandBox */ = {
 			isa = PBXGroup;
 			children = (
+				F94247CF23A6739E00AD4808 /* CodeMirrorEditor */,
 				F984C6492395435B0054A9D1 /* FragmentShader */,
 				F984C640239542130054A9D1 /* Controllers */,
 				F984C63B239541520054A9D1 /* GLSLOutput */,
@@ -155,6 +161,8 @@
 				F93521DF23A5D340001FB9FF /* GLSLSandboxMainViewController.m */,
 				F93521E123A5D6F9001FB9FF /* GLSLSandboxCustomViewController.h */,
 				F93521E223A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m */,
+				F94247D123A67F0E00AD4808 /* GLSLCodeViewController.h */,
+				F94247D223A67F0E00AD4808 /* GLSLCodeViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,6 +258,7 @@
 				F984C62E23953E940054A9D1 /* Assets.xcassets in Resources */,
 				F984C6532395435B0054A9D1 /* SpreadLight.fsh in Resources */,
 				F984C62C23953E930054A9D1 /* Main.storyboard in Resources */,
+				F94247D023A6739E00AD4808 /* CodeMirrorEditor in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F984C62323953E930054A9D1 /* AppDelegate.m in Sources */,
+				F94247D323A67F0E00AD4808 /* GLSLCodeViewController.m in Sources */,
 				F984C646239542130054A9D1 /* GLSLSandboxViewController.m in Sources */,
 				F984C645239542130054A9D1 /* GLSLSandboxListViewController.m in Sources */,
 				F984C63423953E940054A9D1 /* main.m in Sources */,
