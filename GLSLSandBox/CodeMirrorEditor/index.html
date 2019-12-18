@@ -1,32 +1,68 @@
 <!DOCTYPE html>
+<head>
+  <style>
+    body {
+      background-color: #000000;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100vw;
+      width: 100vh;
+    }
+    button,
+    select,
+    a,
+    a:visited {
+      padding: 8px 12px 8px 12px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 5px;
+      color: #ffffff;
+      background-color: #000000;
+      opacity: 0.5;
+      font-family: Monospace;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    button:hover,
+    select:hover,
+    a:hover {
+      opacity: 1;
+      box-shadow: 0 0 4px #fff;
+    }
+    option {
+      color: #ffffff;
+      background-color: #000000;
+    }
+  </style>
+  <title>GLSL Sandbox</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-<title>CodeMirror: Full Screen Editing</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
-
-<link rel="stylesheet" href="./doc/docs.css" />
-<link rel="stylesheet" href="./lib/codemirror.css" />
-<link rel="stylesheet" href="lib/default.css">
-<link rel="stylesheet" href="./addon/display/fullscreen.css" />
-<link rel="stylesheet" href="./theme/night.css" />
-<script src="./lib/codemirror.js"></script>
-<script src="./mode/xml/xml.js"></script>
-<script src="./mode/clike/clike.js"></script>
-<script src="./addon/display/fullscreen.js"></script>
-<script src="./addon/edit/matchbrackets.js"></script>
-
+  <!-- <link rel="stylesheet" href="./doc/docs.css" /> -->
+  <link rel="stylesheet" href="./lib/codemirror.css" />
+  <link rel="stylesheet" href="lib/default.css" />
+  <!-- <link rel="stylesheet" href="./addon/display/fullscreen.css" /> -->
+  <link rel="stylesheet" href="./theme/night.css" />
+  <script src="./lib/codemirror.js"></script>
+  <!--  <script src="lib/glsl.js"></script>-->
+  <script src="./mode/clike/clike.js"></script>
+  <!-- <script src="./addon/display/fullscreen.js"></script> -->
+  <script src="./addon/edit/matchbrackets.js"></script>
+  <script src="./js/bridge.js"></script>
+</head>
 
 <body>
-  <form>
-    <textarea id="code" name="code"></textarea>
-</form>
   <script>
-    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+    var editor = CodeMirror(document.body, {
       lineNumbers: true,
-      theme: "night",
-      fullScreen: true,
-      mode: "x-shader/x-fragment",
+      theme: 'night',
+      // fullScreen: true,
+      mode: 'x-shader/x-fragment',
       matchBrackets: true,
+      readOnly: 'nocursor',
     });
   </script>
 </body>
