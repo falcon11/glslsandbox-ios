@@ -3,7 +3,10 @@ function getCode() {
     return "";
 }
 
-function setCode(code) {
+function setCode(code, readOnly = false) {
     if (!editor) return;
     editor.setValue(code);
+    if (readOnly) {
+        editor.setOption('readOnly', 'nocursor');
+    }
 }

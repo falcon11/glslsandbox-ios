@@ -9,6 +9,7 @@
 #import "GLSLSandboxViewController.h"
 #import "GPUImage.h"
 #import "GLSLSandboxOutput.h"
+#import "GLSLSandboxModel.h"
 
 @interface GLSLSandboxViewController ()
 

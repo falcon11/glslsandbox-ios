@@ -29,6 +29,7 @@
 		F984C6572395435B0054A9D1 /* Rabbit.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C64F2395435B0054A9D1 /* Rabbit.fsh */; };
 		F984C6582395435B0054A9D1 /* AshokaChakra.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C6502395435B0054A9D1 /* AshokaChakra.fsh */; };
 		F984C6592395435B0054A9D1 /* Round.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C6512395435B0054A9D1 /* Round.fsh */; };
+		F99EA04323ABD25C00C93A55 /* GLSLSandboxModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F99EA04223ABD25C00C93A55 /* GLSLSandboxModel.m */; };
 		F9CD14A4239F7F39004D19C9 /* GithubCat.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F9CD14A3239F7F39004D19C9 /* GithubCat.fsh */; };
 		F9CD14AA239F91D4004D19C9 /* ProteanClouds.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F9CD14A9239F91D4004D19C9 /* ProteanClouds.fsh */; };
 		F9CD14AC239F93F3004D19C9 /* Cybertruck.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F9CD14AB239F93F3004D19C9 /* Cybertruck.fsh */; };
@@ -69,6 +70,8 @@
 		F984C64F2395435B0054A9D1 /* Rabbit.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Rabbit.fsh; sourceTree = "<group>"; };
 		F984C6502395435B0054A9D1 /* AshokaChakra.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AshokaChakra.fsh; sourceTree = "<group>"; };
 		F984C6512395435B0054A9D1 /* Round.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Round.fsh; sourceTree = "<group>"; };
+		F99EA04123ABD25C00C93A55 /* GLSLSandboxModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLSLSandboxModel.h; sourceTree = "<group>"; };
+		F99EA04223ABD25C00C93A55 /* GLSLSandboxModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLSLSandboxModel.m; sourceTree = "<group>"; };
 		F9CD14A3239F7F39004D19C9 /* GithubCat.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = GithubCat.fsh; sourceTree = "<group>"; };
 		F9CD14A9239F91D4004D19C9 /* ProteanClouds.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = ProteanClouds.fsh; sourceTree = "<group>"; };
 		F9CD14AB239F93F3004D19C9 /* Cybertruck.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Cybertruck.fsh; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 		F984C62023953E930054A9D1 /* GLSLSandBox */ = {
 			isa = PBXGroup;
 			children = (
+				F99EA04023ABD20B00C93A55 /* Models */,
 				F94247CF23A6739E00AD4808 /* CodeMirrorEditor */,
 				F984C6492395435B0054A9D1 /* FragmentShader */,
 				F984C640239542130054A9D1 /* Controllers */,
@@ -183,6 +187,15 @@
 				F9CD14A9239F91D4004D19C9 /* ProteanClouds.fsh */,
 			);
 			path = FragmentShader;
+			sourceTree = "<group>";
+		};
+		F99EA04023ABD20B00C93A55 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F99EA04123ABD25C00C93A55 /* GLSLSandboxModel.h */,
+				F99EA04223ABD25C00C93A55 /* GLSLSandboxModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +333,7 @@
 				F93521E323A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m in Sources */,
 				F984C62623953E930054A9D1 /* SceneDelegate.m in Sources */,
 				F984C63E239541930054A9D1 /* GLSLSandboxOutput.m in Sources */,
+				F99EA04323ABD25C00C93A55 /* GLSLSandboxModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,7 @@
 
 #import "GLSLSandboxListViewController.h"
 #import "GLSLSandboxViewController.h"
-
-@implementation GLSLSandboxModel
-
-@end
+#import "GLSLSandboxModel.h"
 
 @interface GLSLSandboxListViewController ()<UITableViewDataSource, UITableViewDelegate>
 

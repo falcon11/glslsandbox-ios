@@ -7,7 +7,7 @@
 //
 
 #import "GLSLSandboxCustomViewController.h"
-#import "GLSLSandboxListViewController.h"
+#import "GLSLSandboxModel.h"
 
 @interface GLSLSandboxCustomViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray<GLSLSandboxModel *> *customGLSLArray;

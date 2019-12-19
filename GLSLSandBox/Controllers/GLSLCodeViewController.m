@@ -31,6 +31,8 @@
 - (WKWebView *)webView {
     if (!_webView) {
         _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+        _webView.scrollView.bounces = NO;
+        _webView.scrollView.scrollEnabled = NO;
     }
     return _webView;
 }
@@ -49,7 +51,7 @@
 }
 
 - (void)loadSourceCode:(NSString *)sourceCode {
-    [self.webView evaluateJavaScript:[NSString stringWithFormat:@"setCode(`%@`)", sourceCode] completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+    [self.webView evaluateJavaScript:[NSString stringWithFormat:@"setCode(`%@`, true)", sourceCode] completionHandler:^(id _Nullable result, NSError * _Nullable error) {
         NSLog(@"error: %@", error);
     }];
 }

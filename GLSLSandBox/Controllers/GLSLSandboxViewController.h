@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GLSLSandboxListViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+@class GLSLSandboxModel;
 
 @interface GLSLSandboxViewController : UIViewController
 
