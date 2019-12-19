@@ -23,6 +23,8 @@ typedef enum {
 @property (nonatomic, strong) NSString *fshString;
 @property (nonatomic, strong) NSString *fshFilePath;
 
+- (NSString *)sourceCode;
+
 @end
 
 NS_ASSUME_NONNULL_END

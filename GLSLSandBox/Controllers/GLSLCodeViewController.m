@@ -8,6 +8,7 @@
 
 #import "GLSLCodeViewController.h"
 #import <WebKit/WebKit.h>
+#import "GLSLSandboxModel.h"
 
 @interface GLSLCodeViewController ()<WKNavigationDelegate>
 
@@ -51,7 +52,7 @@
 }
 
 - (void)loadSourceCode:(NSString *)sourceCode {
-    [self.webView evaluateJavaScript:[NSString stringWithFormat:@"setCode(`%@`, true)", sourceCode] completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+    [self.webView evaluateJavaScript:[NSString stringWithFormat:@"setCode(`%@`, %@)", sourceCode, self.readOnly ? @"true" : @"false"] completionHandler:^(id _Nullable result, NSError * _Nullable error) {
         NSLog(@"error: %@", error);
     }];
 }
@@ -66,8 +67,8 @@
 
 #pragma mark - WKNavigationDelegate
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    NSString *sourceCode = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Flame" ofType:@"fsh"] encoding:NSUTF8StringEncoding error:nil];
-    [self loadSourceCode:sourceCode];
+//    NSString *sourceCode = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Flame" ofType:@"fsh"] encoding:NSUTF8StringEncoding error:nil];
+    [self loadSourceCode:[self.glslModel sourceCode]];
 }
 
 @end

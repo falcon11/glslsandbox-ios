@@ -10,6 +10,7 @@
 #import "GLSLSandboxListViewController.h"
 #import "GLSLSandboxCustomViewController.h"
 #import "GLSLCodeViewController.h"
+#import "GLSLSandboxModel.h"
 
 @interface GLSLSandboxMainViewController ()
 
@@ -73,6 +74,11 @@
 
 - (void)handleAddCustomGLSL:(UIBarButtonItem *)buttonItem {
     GLSLCodeViewController *vc = [[GLSLCodeViewController alloc] init];
+    GLSLSandboxModel *glslModel = [GLSLSandboxModel new];
+    glslModel.fshType = EmbedFshName;
+    glslModel.fshFileName = @"Flame";
+    vc.glslModel = glslModel;
+    vc.readOnly = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

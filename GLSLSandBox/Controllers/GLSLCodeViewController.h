@@ -10,7 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class GLSLSandboxModel;
+
 @interface GLSLCodeViewController : UIViewController
+
+@property (nonatomic, strong) GLSLSandboxModel *glslModel;
+@property (nonatomic, assign) BOOL readOnly;
 
 @end
 
