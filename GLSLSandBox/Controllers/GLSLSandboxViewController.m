@@ -22,8 +22,17 @@
 
 @implementation GLSLSandboxViewController
 
-- (instancetype)initWithGLSLSandboxModel:(GLSLSandboxModel *)model {
+- (instancetype)init
+{
     self = [super init];
+    if (self) {
+        self.canViewCode = YES;
+    }
+    return self;
+}
+
+- (instancetype)initWithGLSLSandboxModel:(GLSLSandboxModel *)model {
+    self = [self init];
     if (self) {
         self.glslSandboxModel = model;
     }
@@ -50,8 +59,10 @@
     [self.sandboxOutput startRender];
     [imageView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)]];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:[UIDevice currentDevice]];
-    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Code" style:UIBarButtonItemStylePlain target:self action:@selector(handleViewCode:)];
-    self.navigationItem.rightBarButtonItem = rightBarButton;
+    if (_canViewCode) {
+        UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Code" style:UIBarButtonItemStylePlain target:self action:@selector(handleViewCode:)];
+        self.navigationItem.rightBarButtonItem = rightBarButton;
+    }
 }
 
 //- (void)orientationChanged:(NSNotification *)note {

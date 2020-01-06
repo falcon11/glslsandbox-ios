@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GLSLSandboxViewController : UIViewController
 
+@property (nonatomic, assign) BOOL canViewCode;
+
 - (instancetype)initWithGLSLSandboxModel:(GLSLSandboxModel *)model;
 
 @end

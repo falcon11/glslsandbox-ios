@@ -78,7 +78,7 @@
     glslModel.fshType = EmbedFshName;
     glslModel.fshFileName = @"Flame";
     vc.glslModel = glslModel;
-    vc.readOnly = YES;
+    vc.readOnly = NO;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
