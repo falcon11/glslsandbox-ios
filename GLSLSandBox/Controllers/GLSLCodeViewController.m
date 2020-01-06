@@ -26,7 +26,9 @@
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.webView.navigationDelegate = self;
     [self.webView loadFileURL:[self editorURL] allowingReadAccessToURL:[self editorURL].URLByDeletingLastPathComponent];
-    self.navigationItem.rightBarButtonItem = self.saveButton;
+    if (!_readOnly) {
+        self.navigationItem.rightBarButtonItem = self.saveButton;
+    }
 }
 
 - (WKWebView *)webView {

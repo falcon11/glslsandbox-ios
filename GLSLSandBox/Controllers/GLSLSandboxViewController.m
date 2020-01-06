@@ -10,6 +10,7 @@
 #import "GPUImage.h"
 #import "GLSLSandboxOutput.h"
 #import "GLSLSandboxModel.h"
+#import "GLSLCodeViewController.h"
 
 @interface GLSLSandboxViewController ()
 
@@ -49,6 +50,8 @@
     [self.sandboxOutput startRender];
     [imageView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)]];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:[UIDevice currentDevice]];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Code" style:UIBarButtonItemStylePlain target:self action:@selector(handleViewCode:)];
+    self.navigationItem.rightBarButtonItem = rightBarButton;
 }
 
 //- (void)orientationChanged:(NSNotification *)note {
@@ -60,6 +63,16 @@
     if (!CGSizeEqualToSize(self.sandboxOutput.framebufferSize, self.imageView.bounds.size)) {
         self.sandboxOutput.framebufferSize = self.imageView.bounds.size;
     }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.sandboxOutput startRender];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.sandboxOutput stopRender];
 }
 
 - (GLSLSandboxOutput *)sandboxOutputWithModel:(GLSLSandboxModel *)model {
@@ -89,6 +102,13 @@
 - (void)handleGesture:(UIGestureRecognizer *)gesture {
     CGPoint position = [gesture locationInView:self.imageView];
     self.sandboxOutput.mousePosition = CGSizeMake(position.x / self.imageView.bounds.size.width, 1 - position.y / self.imageView.bounds.size.height);
+}
+
+- (void)handleViewCode:(UIBarButtonItem *)barItem {
+    GLSLCodeViewController *vc = [[GLSLCodeViewController alloc] init];
+    vc.glslModel = self.glslSandboxModel;
+    vc.readOnly = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)dealloc {
