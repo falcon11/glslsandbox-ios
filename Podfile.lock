@@ -1,16 +1,21 @@
 PODS:
+  - FCFileManager (1.0.20)
   - GPUImage (0.1.7)
 
 DEPENDENCIES:
+  - FCFileManager
   - GPUImage (~> 0.1.7)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - GPUImage
+  trunk:
+    - FCFileManager
 
 SPEC CHECKSUMS:
+  FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
 
-PODFILE CHECKSUM: bd9339ae33d48febe7f43ae2e6d81d7b58cde489
+PODFILE CHECKSUM: a3001f822d76871c0033855b358516f0a16dfa9a
 
 COCOAPODS: 1.8.4

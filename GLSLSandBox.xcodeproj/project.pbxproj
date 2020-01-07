@@ -12,6 +12,7 @@
 		F93521E323A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93521E223A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m */; };
 		F94247D023A6739E00AD4808 /* CodeMirrorEditor in Resources */ = {isa = PBXBuildFile; fileRef = F94247CF23A6739E00AD4808 /* CodeMirrorEditor */; };
 		F94247D323A67F0E00AD4808 /* GLSLCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F94247D223A67F0E00AD4808 /* GLSLCodeViewController.m */; };
+		F95BF1EC23C4CBB9002FA92F /* GLSLFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F95BF1EB23C4CBB9002FA92F /* GLSLFileManager.m */; };
 		F984C62323953E930054A9D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C62223953E930054A9D1 /* AppDelegate.m */; };
 		F984C62623953E930054A9D1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F984C62523953E930054A9D1 /* SceneDelegate.m */; };
 		F984C62C23953E930054A9D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F984C62A23953E930054A9D1 /* Main.storyboard */; };
@@ -46,6 +47,8 @@
 		F94247CF23A6739E00AD4808 /* CodeMirrorEditor */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CodeMirrorEditor; sourceTree = "<group>"; };
 		F94247D123A67F0E00AD4808 /* GLSLCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLSLCodeViewController.h; sourceTree = "<group>"; };
 		F94247D223A67F0E00AD4808 /* GLSLCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLSLCodeViewController.m; sourceTree = "<group>"; };
+		F95BF1EA23C4CBB9002FA92F /* GLSLFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLSLFileManager.h; sourceTree = "<group>"; };
+		F95BF1EB23C4CBB9002FA92F /* GLSLFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLSLFileManager.m; sourceTree = "<group>"; };
 		F984C61E23953E930054A9D1 /* GLSLSandBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLSLSandBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F984C62123953E930054A9D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F984C62223953E930054A9D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,6 +109,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F95BF1E923C4CA9D002FA92F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F95BF1EA23C4CBB9002FA92F /* GLSLFileManager.h */,
+				F95BF1EB23C4CBB9002FA92F /* GLSLFileManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		F984C61523953E930054A9D1 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +139,7 @@
 		F984C62023953E930054A9D1 /* GLSLSandBox */ = {
 			isa = PBXGroup;
 			children = (
+				F95BF1E923C4CA9D002FA92F /* Managers */,
 				F99EA04023ABD20B00C93A55 /* Models */,
 				F94247CF23A6739E00AD4808 /* CodeMirrorEditor */,
 				F984C6492395435B0054A9D1 /* FragmentShader */,
@@ -332,6 +345,7 @@
 				F93521E023A5D340001FB9FF /* GLSLSandboxMainViewController.m in Sources */,
 				F93521E323A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m in Sources */,
 				F984C62623953E930054A9D1 /* SceneDelegate.m in Sources */,
+				F95BF1EC23C4CBB9002FA92F /* GLSLFileManager.m in Sources */,
 				F984C63E239541930054A9D1 /* GLSLSandboxOutput.m in Sources */,
 				F99EA04323ABD25C00C93A55 /* GLSLSandboxModel.m in Sources */,
 			);
