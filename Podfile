@@ -8,5 +8,6 @@ target 'GLSLSandBox' do
   # Pods for GLSLSandBox
   pod 'GPUImage', '~> 0.1.7'
   pod 'FCFileManager'
+  pod 'FMDB'
 
 end

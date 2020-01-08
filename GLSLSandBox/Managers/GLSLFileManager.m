@@ -48,14 +48,15 @@
 
 - (void)saveGLSLSandboxModelToDisk:(GLSLSandboxModel *)model callback:(SaveModelCallback)callback {
     if (model.fshType == FshString) {
-        NSString *path = [self.baseDirectory stringByAppendingPathComponent:[self generateFileName]];
+        NSString *fileName = [self generateFileName];
+        NSString *path = [self.baseDirectory stringByAppendingPathComponent:fileName];
         NSError *error = nil;
         [FCFileManager writeFileAtPath:path content:model.fshString error:&error];
         if (callback) {
             GLSLSandboxModel *newModel = [GLSLSandboxModel new];
             newModel.fshType = FshFilePath;
             newModel.fshFileName = model.fshFileName;
-            newModel.fshFilePath = path;
+            newModel.fshFilePath = fileName;
             callback(error, newModel);
         }
     }

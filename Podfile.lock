@@ -1,9 +1,13 @@
 PODS:
   - FCFileManager (1.0.20)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - GPUImage (0.1.7)
 
 DEPENDENCIES:
   - FCFileManager
+  - FMDB
   - GPUImage (~> 0.1.7)
 
 SPEC REPOS:
@@ -11,11 +15,13 @@ SPEC REPOS:
     - GPUImage
   trunk:
     - FCFileManager
+    - FMDB
 
 SPEC CHECKSUMS:
   FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
 
-PODFILE CHECKSUM: a3001f822d76871c0033855b358516f0a16dfa9a
+PODFILE CHECKSUM: a84cbdfcc093f3116db97b30dfdbd0f204442fca
 
 COCOAPODS: 1.8.4

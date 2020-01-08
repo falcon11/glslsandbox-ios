@@ -30,6 +30,7 @@
 		F984C6572395435B0054A9D1 /* Rabbit.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C64F2395435B0054A9D1 /* Rabbit.fsh */; };
 		F984C6582395435B0054A9D1 /* AshokaChakra.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C6502395435B0054A9D1 /* AshokaChakra.fsh */; };
 		F984C6592395435B0054A9D1 /* Round.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F984C6512395435B0054A9D1 /* Round.fsh */; };
+		F990728B23C6156E00188C89 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F990728A23C6156E00188C89 /* DatabaseManager.m */; };
 		F99EA04323ABD25C00C93A55 /* GLSLSandboxModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F99EA04223ABD25C00C93A55 /* GLSLSandboxModel.m */; };
 		F9CD14A4239F7F39004D19C9 /* GithubCat.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F9CD14A3239F7F39004D19C9 /* GithubCat.fsh */; };
 		F9CD14AA239F91D4004D19C9 /* ProteanClouds.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F9CD14A9239F91D4004D19C9 /* ProteanClouds.fsh */; };
@@ -73,6 +74,8 @@
 		F984C64F2395435B0054A9D1 /* Rabbit.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Rabbit.fsh; sourceTree = "<group>"; };
 		F984C6502395435B0054A9D1 /* AshokaChakra.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AshokaChakra.fsh; sourceTree = "<group>"; };
 		F984C6512395435B0054A9D1 /* Round.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Round.fsh; sourceTree = "<group>"; };
+		F990728923C6156E00188C89 /* DatabaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		F990728A23C6156E00188C89 /* DatabaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		F99EA04123ABD25C00C93A55 /* GLSLSandboxModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLSLSandboxModel.h; sourceTree = "<group>"; };
 		F99EA04223ABD25C00C93A55 /* GLSLSandboxModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLSLSandboxModel.m; sourceTree = "<group>"; };
 		F9CD14A3239F7F39004D19C9 /* GithubCat.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = GithubCat.fsh; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 			children = (
 				F95BF1EA23C4CBB9002FA92F /* GLSLFileManager.h */,
 				F95BF1EB23C4CBB9002FA92F /* GLSLFileManager.m */,
+				F990728923C6156E00188C89 /* DatabaseManager.h */,
+				F990728A23C6156E00188C89 /* DatabaseManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 				F94247D323A67F0E00AD4808 /* GLSLCodeViewController.m in Sources */,
 				F984C646239542130054A9D1 /* GLSLSandboxViewController.m in Sources */,
 				F984C645239542130054A9D1 /* GLSLSandboxListViewController.m in Sources */,
+				F990728B23C6156E00188C89 /* DatabaseManager.m in Sources */,
 				F984C63423953E940054A9D1 /* main.m in Sources */,
 				F93521E023A5D340001FB9FF /* GLSLSandboxMainViewController.m in Sources */,
 				F93521E323A5D6F9001FB9FF /* GLSLSandboxCustomViewController.m in Sources */,

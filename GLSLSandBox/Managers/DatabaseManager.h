@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class GLSLSandboxModel;
+
+typedef void(^SaveSandboxModelToDBCallback)(NSError *error);
+
 @interface DatabaseManager : NSObject
+
+- (void)saveGLSLSandboxModelToDatabase:(GLSLSandboxModel *)model callback:(SaveSandboxModelToDBCallback)callback;
 
 @end
 
