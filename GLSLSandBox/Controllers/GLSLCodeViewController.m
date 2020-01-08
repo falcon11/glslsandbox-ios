@@ -10,6 +10,7 @@
 #import <WebKit/WebKit.h>
 #import "GLSLSandboxModel.h"
 #import "GLSLSandboxViewController.h"
+#import "GLSLFileManager.h"
 
 @interface GLSLCodeViewController ()<WKNavigationDelegate>
 
@@ -95,6 +96,13 @@
 - (void)handleSave:(UIBarButtonItem *)button {
     [self.webView evaluateJavaScript:@"getCode()" completionHandler:^(id _Nullable result, NSError * _Nullable error) {
         NSLog(@"error: %@;\nresult====%@", error, result);
+        GLSLSandboxModel *model = [GLSLSandboxModel new];
+        model.fshType = FshString;
+        model.fshString = result;
+        model.fshFileName = @"test";
+        [[GLSLFileManager shareInstance] saveGLSLSandboxModelToDisk:model callback:^(NSError * _Nonnull error, GLSLSandboxModel * _Nonnull newModel) {
+            NSLog(@"save model error: %@; path: %@", error, newModel.fshFilePath);
+        }];
     }];
 }
 

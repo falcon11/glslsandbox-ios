@@ -16,6 +16,8 @@ typedef void(^SaveModelCallback)(NSError *error, GLSLSandboxModel *newModel);
 
 @interface GLSLFileManager : NSObject
 
++ (instancetype)shareInstance;
+
 - (void)saveGLSLSandboxModelToDisk:(GLSLSandboxModel *)model callback:(SaveModelCallback)callback;
 
 @end
