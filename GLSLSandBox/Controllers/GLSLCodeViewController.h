@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString *const kGLSLSandboxModelDidSaved;
+
 @class GLSLSandboxModel;
 
 @interface GLSLCodeViewController : UIViewController

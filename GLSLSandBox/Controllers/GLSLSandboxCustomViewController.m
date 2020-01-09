@@ -10,6 +10,7 @@
 #import "GLSLSandboxModel.h"
 #import "DatabaseManager.h"
 #import "GLSLSandboxViewController.h"
+#import "GLSLCodeViewController.h"
 
 @interface GLSLSandboxCustomViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray<GLSLSandboxModel *> *customGLSLArray;
@@ -25,6 +26,7 @@
     [self.view addSubview:self.tableView];
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self loadData];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadData) name:kGLSLSandboxModelDidSaved object:nil];
 }
 
 - (UITableView *)tableView {
@@ -68,6 +70,11 @@
     GLSLSandboxModel *model = self.customGLSLArray[indexPath.row];
     GLSLSandboxViewController *vc = [[GLSLSandboxViewController alloc] initWithGLSLSandboxModel:model];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

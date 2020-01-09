@@ -12,11 +12,14 @@
 #import "GLSLSandboxViewController.h"
 #import "GLSLFileManager.h"
 
+NSString *const kGLSLSandboxModelDidSaved = @"GLSLSandboxModelDidSaved";
+
 @interface GLSLCodeViewController ()<WKNavigationDelegate>
 
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) UIBarButtonItem *saveButton;
 @property (nonatomic, strong) UIBarButtonItem *previewButton;
+@property (nonatomic, strong) UIAlertAction *okAction;
 
 @end
 
@@ -91,18 +94,48 @@
     }];
 }
 
+- (void)fileNameDidChange:(UITextField *)textField {
+    self.okAction.enabled = textField.text.length > 0;
+}
+
 /// get editor code
 /// @param button button
 - (void)handleSave:(UIBarButtonItem *)button {
-    [self.webView evaluateJavaScript:@"getCode()" completionHandler:^(id _Nullable result, NSError * _Nullable error) {
-        NSLog(@"error: %@;\nresult====%@", error, result);
+    __weak typeof(self) weakSelf = self;
+    __block NSString *sourceCode = nil;
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"Tip" message:@"Input File Name" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *oKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSString *fileName = alertVC.textFields[0].text;
+        if ([fileName length] == 0) {
+            return;
+        }
         GLSLSandboxModel *model = [GLSLSandboxModel new];
         model.fshType = FshString;
-        model.fshString = result;
-        model.fshFileName = @"test";
+        model.fshString = sourceCode;
+        model.fshFileName = fileName;
         [[GLSLFileManager shareInstance] saveGLSLSandboxModelToDisk:model callback:^(NSError * _Nonnull error, GLSLSandboxModel * _Nonnull newModel) {
             NSLog(@"save model error: %@; path: %@", error, newModel.fshFilePath);
+            if (!error) {
+                [weakSelf.navigationController popViewControllerAnimated:YES];
+                [[NSNotificationCenter defaultCenter] postNotificationName:kGLSLSandboxModelDidSaved object:nil];
+            }
         }];
+    }];
+    oKAction.enabled = false;
+    self.okAction = oKAction;
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    [alertVC addAction:oKAction];
+    [alertVC addAction:cancelAction];
+    [alertVC addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"file name";
+        [textField addTarget:self action:@selector(fileNameDidChange:) forControlEvents:UIControlEventEditingChanged];
+    }];
+    [self.webView evaluateJavaScript:@"getCode()" completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+        NSLog(@"error: %@;\nresult====%@", error, result);
+        if (!error) {
+            sourceCode = result;
+            [weakSelf presentViewController:alertVC animated:YES completion:nil];
+        } else {}
     }];
 }
 
