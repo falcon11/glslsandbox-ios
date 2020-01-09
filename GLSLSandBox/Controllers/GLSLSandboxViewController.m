@@ -96,7 +96,7 @@
             sandboxOutput = [[GLSLSandboxOutput alloc] initWidthFragementShaderString:model.fshString];
             break;
         case FshFilePath: {
-            NSString *fshString = [[NSString alloc] initWithContentsOfFile:model.fshFilePath encoding:NSUTF8StringEncoding error:nil];
+            NSString *fshString = [model sourceCode];
             sandboxOutput = [[GLSLSandboxOutput alloc] initWidthFragementShaderString:fshString];
             break;
         }

@@ -12,11 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class GLSLSandboxModel;
 
-typedef void(^SaveModelCallback)(NSError *error, GLSLSandboxModel *newModel);
+typedef void(^SaveModelCallback)(NSError * _Nullable error, GLSLSandboxModel * _Nullable newModel);
 
 @interface GLSLFileManager : NSObject
 
 + (instancetype)shareInstance;
+
+- (NSString *)glslsandboxModelAbsolutePath:(GLSLSandboxModel *)model;
 
 - (void)saveGLSLSandboxModelToDisk:(GLSLSandboxModel *)model callback:(SaveModelCallback)callback;
 

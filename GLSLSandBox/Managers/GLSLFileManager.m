@@ -9,6 +9,7 @@
 #import "GLSLFileManager.h"
 #import <FCFileManager.h>
 #import "GLSLSandboxModel.h"
+#import "DatabaseManager.h"
 
 @interface GLSLFileManager ()
 
@@ -38,6 +39,17 @@
     return self;
 }
 
+- (NSString *)baseDirectory {
+    return _baseDirectory;
+}
+
+- (NSString *)glslsandboxModelAbsolutePath:(GLSLSandboxModel *)model {
+    if (model.fshType == FshFilePath) {
+        return [self.baseDirectory stringByAppendingPathComponent:model.fshFilePath];
+    }
+    return nil;
+}
+
 - (NSString *)generateFileName {
     NSDate *date = [NSDate date];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -52,12 +64,19 @@
         NSString *path = [self.baseDirectory stringByAppendingPathComponent:fileName];
         NSError *error = nil;
         [FCFileManager writeFileAtPath:path content:model.fshString error:&error];
-        if (callback) {
-            GLSLSandboxModel *newModel = [GLSLSandboxModel new];
-            newModel.fshType = FshFilePath;
-            newModel.fshFileName = model.fshFileName;
-            newModel.fshFilePath = fileName;
-            callback(error, newModel);
+        if (error) {
+            if (callback) callback(error, nil);
+            return;
+        }
+        GLSLSandboxModel *newModel = [GLSLSandboxModel new];
+        newModel.fshType = FshFilePath;
+        newModel.fshFileName = model.fshFileName;
+        newModel.fshFilePath = fileName;
+        BOOL success = [[DatabaseManager shareInstance] saveGLSLSandboxModelToDatabase:newModel];
+        if (success) {
+            if (callback) callback(nil, newModel);
+        } else if (callback) {
+            callback(error, nil);
         }
     }
 }

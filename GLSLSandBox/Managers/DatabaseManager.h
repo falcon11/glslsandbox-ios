@@ -16,7 +16,11 @@ typedef void(^SaveSandboxModelToDBCallback)(NSError *error);
 
 @interface DatabaseManager : NSObject
 
-- (void)saveGLSLSandboxModelToDatabase:(GLSLSandboxModel *)model callback:(SaveSandboxModelToDBCallback)callback;
++ (instancetype)shareInstance;
+
+- (BOOL)saveGLSLSandboxModelToDatabase:(GLSLSandboxModel *)model;
+
+- (NSMutableArray<GLSLSandboxModel *> *)getGLSLSandboxModelList;
 
 @end
 

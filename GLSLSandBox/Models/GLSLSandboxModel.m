@@ -7,6 +7,7 @@
 //
 
 #import "GLSLSandboxModel.h"
+#import "GLSLFileManager.h"
 
 @implementation GLSLSandboxModel
 
@@ -23,7 +24,7 @@
             break;
         }
         case FshFilePath:
-            sourceCode = [NSString stringWithContentsOfFile:self.fshFilePath encoding:NSUTF8StringEncoding error:nil];
+            sourceCode = [NSString stringWithContentsOfFile:[[GLSLFileManager shareInstance] glslsandboxModelAbsolutePath:self] encoding:NSUTF8StringEncoding error:nil];
             break;
         default:
             break;

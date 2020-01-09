@@ -51,13 +51,28 @@ static const NSString *fragmentShaderTableName = @"fragmentshader";
     return [self.db executeUpdate:stmt];
 }
 
-- (void)saveGLSLSandboxModelToDatabase:(GLSLSandboxModel *)model callback:(SaveSandboxModelToDBCallback)callback {
+- (BOOL)saveGLSLSandboxModelToDatabase:(GLSLSandboxModel *)model {
     BOOL success = [self.db executeUpdate:@"insert into fragmentshader (type, filename, code, path) values (?, ?, ?, ?)", @(model.fshType), model.fshFileName, model.fshString ?: [NSNull null], model.fshFilePath ?: [NSNull null]];
-    NSError *error = nil;
     if (!success) {
-        error = [self.db lastError];
+        NSError *error = [self.db lastError];
+        NSLog(@"save model to db error: %@", error);
     }
-    if (callback) callback(error);
+    return success;
+}
+
+- (NSMutableArray<GLSLSandboxModel *> *)getGLSLSandboxModelList {
+    FMResultSet *s = [self.db executeQuery:@"select * from fragmentshader"];
+    NSMutableArray<GLSLSandboxModel *> *list = [NSMutableArray new];
+    while ([s next]) {
+        NSDictionary *dict = [s resultDictionary];
+        GLSLSandboxModel *model = [GLSLSandboxModel new];
+        model.fshType = [dict[@"type"] intValue];
+        model.fshFileName = dict[@"filename"];
+        model.fshString = [s columnIsNull:@"code"] ? nil : dict[@"code"];
+        model.fshFilePath = [s columnIsNull:@"path"] ? nil : dict[@"path"];
+        [list insertObject:model atIndex:0];
+    }
+    return list;
 }
 
 - (void)dealloc
