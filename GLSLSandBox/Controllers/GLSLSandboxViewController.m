@@ -56,7 +56,6 @@
     self.sandboxOutput = [self sandboxOutputWithModel:self.glslSandboxModel];
     self.sandboxOutput.framebufferSize = frame.size;
     [self.sandboxOutput addTarget:imageView];
-    [self.sandboxOutput startRender];
     [imageView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)]];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:[UIDevice currentDevice]];
     if (_canViewCode) {
@@ -76,8 +75,8 @@
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self.sandboxOutput startRender];
 }
 

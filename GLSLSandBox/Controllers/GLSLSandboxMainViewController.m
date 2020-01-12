@@ -75,8 +75,9 @@
 - (void)handleAddCustomGLSL:(UIBarButtonItem *)buttonItem {
     GLSLCodeViewController *vc = [[GLSLCodeViewController alloc] init];
     GLSLSandboxModel *glslModel = [GLSLSandboxModel new];
-    glslModel.fshType = EmbedFshName;
-    glslModel.fshFileName = @"Flame";
+    glslModel.fshType = FshString;
+    glslModel.fshFileName = @"";
+    glslModel.fshString = @"";
     vc.glslModel = glslModel;
     vc.readOnly = NO;
     [self.navigationController pushViewController:vc animated:YES];

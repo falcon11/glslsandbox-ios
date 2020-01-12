@@ -134,7 +134,7 @@ dispatch_source_t createDispatchTimer(uint64_t interval, dispatch_queue_t queue,
                     NSString *vertLog = [self->_renderProgram vertexShaderLog];
                     NSLog(@"Vertex shader compile log: %@", vertLog);
                     self->_renderProgram = nil;
-                    NSAssert(NO, @"Filter shader link failed");
+//                    NSAssert(NO, @"Filter shader link failed");
                 }
             }
             self->_positionAttribute = [self->_renderProgram attributeIndex:@"position"];
@@ -159,6 +159,7 @@ dispatch_source_t createDispatchTimer(uint64_t interval, dispatch_queue_t queue,
 }
 
 - (void)startRender {
+    if (!self.renderProgram) return;
     self.startTime = [NSDate date];
     // it seems inefficiency use dispatch_source_t
 //    _timer = createDispatchTimer(50 * NSEC_PER_MSEC, [[GLSLSandboxContext sharedInstance] timeQueue], ^{
